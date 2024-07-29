@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>HTML Login Form</title>
+</head>
+
+<body>
+      <div class="main">
+            <h1>TaskRabbit</h1>
+            <h3>Please upload image</h3>
+            <form method="POST" action="/upload_image/" enctype="multipart/form-data">
+                {% csrf_token %}
+                <span >
+                  Add image
+                </span>
+                <div style="display: none;">
+                    <span class="label-input100">User</span>
+                    <div>
+                      {{ form.user}}
+                    </div>
+                  </div>
+                <div>
+                  <span>Image</span>
+                  <div>
+                    {{ form.image}}
+                  </div>
+                </div>
+        
+                <div class="wrap">
+                    <button type="submit">
+                          Submit
+                    </button>
+              </div>
+            </form>
+      </div>
+</body>
+
+</html>
